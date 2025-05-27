@@ -3,9 +3,9 @@ services:
         image: ddvtech/mistserver_alpine_minimal
         container_name: mistserver
         volumes:
-          - .\config\config.json:/config.json
-          - .\vod:/video
-        shm_size: '2gb'
+          - ./config/config.json:/config.json
+          - ./vod:/video
+        shm_size: '10gb'
         ports:
           - 8080:8080
           - 443:443
