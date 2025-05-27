@@ -1,0 +1,15 @@
+services:
+    mistserver:
+        image: ddvtech/mistserver_alpine_minimal
+        container_name: mistserver
+        volumes:
+          - .\config\config.json:/config.json
+          - .\vod:/video
+        shm_size: '2gb'
+        ports:
+          - 8080:8080
+          - 443:443
+          - 4242:4242
+          - 8889:8889/udp
+          - 5554:5554
+        restart: always
